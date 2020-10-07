@@ -48,10 +48,10 @@
 (with-eval-after-load 'setup-font-check
   (defvar default-font-size-pt
     (cond
-     ((modi/is-font "Monoid") 11)
-     ((modi/is-font "Pragmata") 13)
-     ((modi/is-font "Iosevka SS08") 14)
-     (t 12))
+     ((modi/is-font "Monoid") 15)
+     ((modi/is-font "Pragmata") 15)
+     ((modi/is-font "Iosevka SS08") 15)
+     (t 15))
     "Default font size in points."))
 
 (defvar dark-theme t
@@ -127,8 +127,7 @@ Also restore the original frame size when disabling the menu bar."
 
 ;;; Themes
 ;;                     THEME-NAME      DARK   FCI-RULE-COLOR
-(defconst my/themes '((smyx            'dark  "gray40")
-                      (zenburn         'dark  "gray40")
+(defconst my/themes '((zenburn         'dark  "gray40")
                       (darktooth       'dark  "gray40")
                       (ample           'dark  "gray40")
                       (ample-flat      'dark  "gray40")
@@ -198,7 +197,7 @@ the smart-mode-line theme."
 (modi/gen-all-theme-fns)
 ;; (pp (macroexpand '(modi/gen-all-theme-fns))) ;For debug
 
-(defconst default-dark-theme-fn  'load-theme/smyx
+(defconst default-dark-theme-fn  'load-theme/zenburn
   "Function to set the default dark theme.")
 (defconst default-light-theme-fn 'load-theme/leuven
   "Function to set the default light theme.")

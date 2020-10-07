@@ -1,4 +1,4 @@
-;; Time-stamp: <2020-09-10 21:53:21 kmodi>
+;; Time-stamp: <2020-10-06 21:24:27 prox>
 ;; Author: Kaushal Modi
 
 ;; Global variables
@@ -81,7 +81,6 @@ need Org version to be at least 9.x.")
     gist
     git-timemachine ; walk through git revisions
     ggtags ctags-update
-    hardcore-mode
     hideshow-org
     htmlize
     hungry-delete
@@ -251,7 +250,6 @@ need Org version to be at least 9.x.")
   (require 'setup-git-link)
   (require 'setup-git-timemachine)
   (require 'setup-magit))
-(require 'setup-hardcore)
 (require 'setup-header2)
 (require 'setup-highlight)
 (require 'setup-htmlize)
@@ -397,6 +395,7 @@ need Org version to be at least 9.x.")
 (when (and (bound-and-true-p emacs-initialized)
            (featurep 'setup-visual))
   (funcall default-theme-fn)) ; defined in `setup-visual.el'
+(load-file "~/.emacs.d/personal/init.el")
 
 (setq emacs-initialized t)
 

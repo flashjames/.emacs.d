@@ -1,4 +1,4 @@
-;; Time-stamp: <2018-02-22 14:43:55 kmodi>
+;; Time-stamp: <2020-10-06 21:29:06 prox>
 
 ;; Collection of general purposes defuns and macros
 
@@ -9,7 +9,6 @@
 ;;  Get symbol at point, maybe
 ;;  Quitting emacs
 ;;  Fringe face setting
-;;  Default ag arguments
 ;;  Default rg arguments
 ;;  Emacs version and git branch
 
@@ -90,11 +89,12 @@ If SKIP-DESKTOP-SAVE is non-nil, do not save the desktop. "
                       :background (if (string= (face-background 'default) "unspecified-bg")
                                       "#282828" (face-background 'default))))
 
-;;; Default ag arguments
+;;;ee Default ag arguments
 ;; https://github.com/ggreer/the_silver_searcher
+;;"--skip-vcs-ignores"                ;Ignore files/dirs ONLY from `.ignore'
 (defconst modi/ag-arguments
   '("--nogroup" ;mandatory argument for ag.el as per https://github.com/Wilfred/ag.el/issues/41
-    "--skip-vcs-ignores"                ;Ignore files/dirs ONLY from `.ignore'
+
     "--numbers"                         ;Line numbers
     "--smart-case"
     ;; "--one-device"                      ;Do not cross mounts when searching
@@ -105,8 +105,9 @@ packages.")
 
 ;;; Default rg arguments
 ;; https://github.com/BurntSushi/ripgrep
+;; "--no-ignore-vcs"                   ;Ignore files/dirs ONLY from `.ignore'
 (defconst modi/rg-arguments
-  `("--no-ignore-vcs"                   ;Ignore files/dirs ONLY from `.ignore'
+  `(
     "--line-number"                     ;Line numbers
     "--smart-case"
     "--follow"                 ;Follow symlinks
