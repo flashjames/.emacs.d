@@ -1,4 +1,4 @@
-;; Time-stamp: <2017-06-27 17:48:45 kmodi>
+;; Time-stamp: <2020-10-07 09:44:07 prox>
 
 ;; Fill Column Indicator
 ;; http://www.emacswiki.org/FillColumnIndicator
@@ -9,7 +9,7 @@
   :config
   (progn
     ;; Set global default value for the local var `fci-handle-truncate-lines'
-    (setq-default fci-handle-truncate-lines t) ; Truncate lines in fci mode
+    (setq-default fci-handle-truncate-lines nil) ; Truncate lines in fci mode
     ;; (setq-default fci-handle-truncate-lines nil) ; Do not truncate lines in fci mode
 
     (setq fci-rule-width 1)

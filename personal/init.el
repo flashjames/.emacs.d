@@ -74,3 +74,15 @@
  '(package-selected-packages
 			(quote
 				(markdown-mode json-mode auto-complete autopair web-mode less-css-mode))))
+
+
+;; Bring emacs window to front when opening file with
+;; emacsclient
+;; https://emacs.stackexchange.com/questions/34737/start-emacsclient-with-focus-from-command-line
+(add-hook 'server-switch-hook (lambda () (select-frame-set-input-focus (selected-frame))))
+
+(defun really-kill-emacs ()
+  "Like `kill-emacs', but ignores `kill-emacs-hook'."
+  (interactive)
+  (let (kill-emacs-hook)
+    (kill-emacs)))

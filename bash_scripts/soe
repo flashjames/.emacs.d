@@ -1,0 +1,33 @@
+# Time-stamp: <2020-10-18 16:36:21 prox>
+#
+# --------------------------------------------------------------------
+# Project            : /home/prox/.emacs.d/
+# File Name          : soe.sh
+
+# from https://superuser.com/a/843744
+
+# The emacs or emacsclient command to use
+function _emacsfun
+{
+    # Replace with `emacs` to not run as server/client
+    emacsclient -c -n $@
+}
+
+# An emacs 'alias' with the ability to read from stdin
+function soe
+{
+    # If the argument is - then write stdin to a tempfile and open the
+    # tempfile.
+    if [[ $# -ge 1 ]] && [[ "$1" == - ]]; then
+        tempfile="$(mktemp emacs-stdin-$USER.XXXXXXX --tmpdir)"
+        cat - > "$tempfile"
+        _emacsfun --eval "(find-file \"$tempfile\")" \
+            --eval '(set-visited-file-name nil)' \
+            --eval '(rename-buffer "*stdin*" t))'
+    else
+        _emacsfun "$@"
+    fi
+}
+
+soe
+echo "hi"

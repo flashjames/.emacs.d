@@ -1,4 +1,4 @@
-;; Time-stamp: <2017-07-06 18:09:49 kmodi>
+;; Time-stamp: <2020-10-21 11:14:20 prox>
 
 ;; Python
 
@@ -6,7 +6,10 @@
 (use-package python
   :mode (("\\.py\\'" . python-mode))
   :bind (:map python-mode-map
-         ("<f9>" . python-shell-send-buffer))
+         ("<f9>" . python-shell-send-buffer)
+         ("C-c 9" . python-indent-shift-right)
+         ("C-c 8" . python-indent-shift-left)
+         )
   :config
   (progn
     (defvar modi/python-use-ipython t

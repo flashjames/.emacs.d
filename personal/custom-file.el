@@ -9,9 +9,15 @@
    (quote
     ("de594fe35e10e54f44faf0b8c037ba066900d22cc9e69faf8d238d04cf860131" default)))
  '(fci-rule-color "#383838" t)
+ '(grep-find-ignored-directories
+   (quote
+    ("SCCS" "RCS" "CVS" "MCVS" ".src" ".svn" ".git" ".hg" ".bzr" "_MTN" "_darcs" "{arch}" "node_modules")))
+ '(grep-find-ignored-files
+   (quote
+    (".#*" "*.o" "*~" "*.bin" "*.lbin" "*.so" "*.a" "*.ln" "*.blg" "*.bbl" "*.elc" "*.lof" "*.glo" "*.idx" "*.lot" "*.fmt" "*.tfm" "*.class" "*.fas" "*.lib" "*.mem" "*.x86f" "*.sparcf" "*.dfsl" "*.pfsl" "*.d64fsl" "*.p64fsl" "*.lx64fsl" "*.lx32fsl" "*.dx64fsl" "*.dx32fsl" "*.fx64fsl" "*.fx32fsl" "*.sx64fsl" "*.sx32fsl" "*.wx64fsl" "*.wx32fsl" "*.fasl" "*.ufsl" "*.fsl" "*.dxl" "*.lo" "*.la" "*.gmo" "*.mo" "*.toc" "*.aux" "*.cp" "*.fn" "*.ky" "*.pg" "*.tp" "*.vr" "*.cps" "*.fns" "*.kys" "*.pgs" "*.tps" "*.vrs" "*.pyc" "*.pyo" "*min.js")))
  '(package-selected-packages
    (quote
-    (eros toc-org org-sticky-header emojify mastodon ivy-rich ivy-hydra emamux twilight-anti-bright-theme twilight-bright-theme tao-theme planet-theme leuven-theme darktooth-theme ample-theme zop-to-char yasnippet yaml-mode yafolding xkcd writegood-mode wrap-region wordnut wolfram which-key webpaste web-mode visual-regexp use-package-chords use-package undo-tree transpose-frame tldr tiny sx forecast sunshine smex rich-minority popup smart-mode-line smart-mark smart-compile shackle rpn-calc region-bindings-mode rainbow-mode rainbow-delimiters poporg pomodoro page-break-lines paradox outshine navi-mode outorg org-tree-slide org-cliplink nov neotree multiple-cursors multi-term minibuffer-line markdown-mode manage-minor-mode magit kurecolor keyfreq key-chord iy-go-to-char counsel swiper ivy isend-mode interleave indent-guide imenu-list ibuffer-projectile hydra hungry-delete htmlize hideshow-org ctags-update ggtags git-timemachine gist fold-this flyspell-correct-ivy flycheck fill-column-indicator eww-lnum expand-region engine-mode elfeed el2markdown easy-escape drag-stuff dired-collapse dired-single diff-hl deft command-log-mode buffer-move bm benchmark-init beacon avy auto-highlight-symbol fuzzy auto-complete ascii-art-to-unicode anzu all-ext all s wgrep-ag wgrep ag adaptive-wrap ace-window org-plus-contrib)))
+    (markdown-mode json-mode auto-complete autopair web-mode less-css-mode)))
  '(vc-annotate-background "#2B2B2B")
  '(vc-annotate-color-map
    (quote

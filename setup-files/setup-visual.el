@@ -1,4 +1,4 @@
-;; Time-stamp: <2020-01-20 13:52:35 kmodi>
+;; Time-stamp: <2020-10-07 09:40:26 prox>
 
 ;; Set up the looks of emacs
 
@@ -361,7 +361,7 @@ Font Size:     _C--_/_-_ Decrease     _C-=_/_=_ Increase     _C-0_/_0_ Reset    
 
 ;;; Line truncation
 ;; Enable truncation. This setting does NOT apply to windows split using `C-x 3`
-(setq-default truncate-lines t)
+(setq-default truncate-lines nil)
 ;; Do `M-x toggle-truncate-lines` to toggle truncation mode.
 ;; `truncate-partial-width-windows' has to be nil for `toggle-truncate-lines'
 ;; to work even in split windows
