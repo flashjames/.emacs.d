@@ -31,12 +31,12 @@
 (setq-default tab-width 1)
 
 
-    (add-hook 'java-mode-hook (lambda ()
-                                (setq c-basic-offset 2)))
-    (add-hook 'java-mode-hook (lambda ()
-                                (setq c-basic-offset 2
-                                      tab-width 2
-                                      indent-tabs-mode t)))
+(add-hook 'java-mode-hook (lambda ()
+                            (setq c-basic-offset 2)))
+(add-hook 'java-mode-hook (lambda ()
+                            (setq c-basic-offset 2
+                                  tab-width 2
+                                  indent-tabs-mode t)))
 (setq c-basic-offset 2)
 
 (setq mouse-wheel-scroll-amount '(1 ((shift) . 1)))
